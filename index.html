@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rich Ropac's Web Development Page</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rich Ropac's Portfolio</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <section class="mainWrapper">
+      <header>
+        <h2 class="logo">RichardRopac.com</h2>
+        <div class="toggle"></div>
+      </header>
+
+      <video playsinline autoplay muted loop>
+        <source src="./video/Gallery.mp4" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="text">
+        <p>
+          "Computer Programming is an art, because it applies accumulated
+          knowledge to the world, because it requires skill and ingenuity, and
+          especially because it produces objects of beauty. A software engineer
+          who subconsciously views themselves as an artist will enjoy what they
+          do and will do it better." --David Knuth
+        </p>
+      </div>
+    </section>
+
+    <script>
+      const menuToggle = document.querySelector(".toggle");
+      const theMainWrapper = document.querySelector(".mainWrapper");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        theMainWrapper.classList.toggle("active");
+      });
+    </script>
+    <!-- <script src="js/script.js"></script> -->
+  </body>
 </html>
