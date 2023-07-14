@@ -152,15 +152,19 @@ html {
   cursor: pointer;
 }
 
-.text {
-  position: relative;
+.text{
+  height: 665px;
+  position: relative;;
   text-align: center;
   z-index: 10;
   font-size: 25px;
-  margin-top: 560px;
-  margin-left: 25px;
+  overflow: hidden;
   font-weight: 400;
-  max-width: 100;
+  max-width: 80;
+}
+
+.text p{
+  padding-top: 555px;
 }
 
 #menu-icon {
