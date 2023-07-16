@@ -174,8 +174,8 @@ html {
 .icons {
   display: flex;
   margin-right: 25px;
-  position: absolute;
-  bottom: -630px;
+  position: fixed;
+  bottom: 15px;
 }
 footer {
   position: absolute;
