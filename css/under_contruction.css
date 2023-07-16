@@ -10,18 +10,19 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
+  font-family: "MuseoModerno", cursive;
 }
 
 html {
   min-height: 100%;
 }
 
+
 body {
   background-image: url("../images/Curtain2.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
-  font-family: "MuseoModerno", cursive;
 }
 
 .overlay {
@@ -33,6 +34,10 @@ body {
   background: var(--overlay-color);
   mix-blend-mode: overlay;
   opacity: 0.4;
+}
+
+.logo {
+  font-size: 30px;
 }
 
 header {
