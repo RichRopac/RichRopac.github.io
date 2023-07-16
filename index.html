@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Richard Ropac's Portfolio</title>
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@1,300&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -30,6 +35,8 @@
         Your browser does not support the video tag.
       </video>
 
+      <div class="overlay"></div>
+
       <footer>
         <div class="text">
           <p>
@@ -42,6 +49,62 @@
         </div>
       </footer>
     </section>
+
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="#" class="active"
+            ><i id="navIcon" class="fa fa-home"></i>Home</a
+          >
+        </li>
+        <li>
+          <a href="./under_contruction.html"
+            ><i id="navIcon" class="fa fa-address-card"></i>About</a
+          >
+        </li>
+        <li>
+          <a href="./under_contruction.html"
+            ><i id="navIcon" class="fa fa-certificate"></i>Education</a
+          >
+        </li>
+        <li>
+          <a href="./under_contruction.html"
+            ><i id="navIcon" class="fa fa-book"></i>Skills</a
+          >
+        </li>
+        <li>
+          <a href="./under_contruction.html"
+            ><i id="navIcon" class="fa fa-list"></i>Portfolio</a
+          >
+        </li>
+        <li>
+          <a href="./under_contruction.html"
+            ><i id="navIcon" class="fa fa-address-book"></i>Contact Me</a
+          >
+        </li>
+      </ul>
+      <div class="icons">
+        <a href="https://www.facebook.com/"
+          ><img src="./icons/facebook.png" alt="facebook" class="menuImg"
+        /></a>
+        <a href="https://twitter.com/"
+          ><img src="./icons/twitter.png" alt="twitter.png" class="menuImg"
+        /></a>
+        <a href="https://www.instagram.com/"
+          ><img src="./icons/instagram.png" alt="instagram.png" class="menuImg"
+        /></a>
+        <a href="https://www.linkedin.com/"
+          ><img src="./icons/linkedin.png" alt="linkedin.png" class="menuImg"
+        /></a>
+        <a href="https://www.tiktok.com/"
+          ><img src="./icons/tiktok.png" alt="tiktok.png" class="menuImg"
+        /></a>
+        <a href="https://www.youtube.com/"
+          ><img src="./icons/youtube.png" alt="youtube.png" class="menuImg"
+        /></a>
+      </div>
+    </div>
+
     <script>
       const menuToggle = document.querySelector(".toggle");
       const theMainWrapper = document.querySelector(".mainWrapper");
