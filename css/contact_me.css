@@ -51,7 +51,7 @@ header {
   transform: translateX(-50%) translateY(-50%);
 }
 
-.contact h2 {
+.contact h2, .contact h2 p {
 font-size: 35px;
 text-align: center;
 color: beige;
