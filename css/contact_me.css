@@ -162,6 +162,28 @@ color: beige;
     transition: .5s;
 }
 
+@media (max-width: 520px) {
+  html {
+    font-size: 50%;
+  }
 
+  .home-content h1 {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .home-sci {
+    width: 160px;
+  }
 
+  .home-sci a {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 462px) {
+  .home-content h1 {
+    font-size: 5.2rem;
+  }
+}
