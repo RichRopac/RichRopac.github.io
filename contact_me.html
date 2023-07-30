@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@1,300&display=swap"
+      rel="stylesheet" 
+    />
+    <link rel="stylesheet" href="css/contact_me.css" />
+    <title>Contact Me</title>
+  </head>
+  <body>
+
+    <header>
+      <h2 class="logo">RichardRopac.com</h2>
+      <a href="./index.html"
+        ><img src="./images/close.png" alt="" class="toggle"
+      /></a>
+    </header>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact Me!</h2>
+
+      <form action="https://formsubmit.co/rcropac@gmail.com" method="POST">
+        <!-- Honeypot -->
+        <input type="text" name="_honey" style="display: none;">
+
+        <!-- Disable Captcha -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- Successful Form Submission-->
+        <input type="hidden" name="_next" value="http://www.RichardRopac.com/success.html">
+
+        <div class="input-box">
+          <div class="input-field">
+            <input type="text" name="Name" placeholder="Full Name" required />
+            <span class="focus"></span>
+          </div>
+          <div class="input-field">
+            <input type="text" name="Email:" placeholder="Email Address" required />
+            <span class="focus"></span>
+          </div>
+        </div>
+
+        <div class="input-box">
+          <div class="input-field">
+            <input type="number" name="Phone&nbsp;Number" placeholder="Mobile Number" required />
+            <span class="focus"></span>
+          </div>
+          <div class="input-field">
+            <input type="text" name = "Subject" placeholder="Email Subject" required />
+            <span class="focus"></span>
+          </div>
+        </div>
+
+        <div class="textarea-field">
+          <textarea
+            name="Message"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <span class="focus"></span>
+        </div>
+
+        <div class="submit_btn">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
