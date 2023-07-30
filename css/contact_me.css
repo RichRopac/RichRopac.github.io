@@ -51,7 +51,7 @@ header {
   transform: translateX(-50%) translateY(-50%);
 }
 
-.contact h2, .contact h2 p {
+.contact h2, p {
 font-size: 35px;
 text-align: center;
 color: beige;
@@ -149,3 +149,19 @@ color: beige;
     background-color: beige;
     cursor: pointer;
 }
+
+#b1, #b2, #b3 {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    font-size: 1.2rem;
+    color: beige;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+
+
