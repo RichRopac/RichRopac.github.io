@@ -197,7 +197,7 @@ header {
 
 @media (max-width: 1500px) {
   html {
-    font-size: 60%;
+    font-size: 80%;
   }
 
   .contact h2{
@@ -208,7 +208,7 @@ header {
   section {
     margin-left: 7%;
   }
-}
+} 
 
 @media (max-width: 1200px) {
   html {
