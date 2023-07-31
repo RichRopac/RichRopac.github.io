@@ -195,33 +195,53 @@ header {
   transition: 0.5s;
 }
 
+@media (max-width: 1500px) {
+  html {
+    font-size: 60%;
+  }
+
+  .contact h2{
+   text-align: left;
+   margin-left: 17%;
+  }
+  
+  section {
+    margin-left: 7%;
+  }
+}
+
 @media (max-width: 1200px) {
   html {
-    font-size: 55%;
+    font-size: 50%;
+  }
+
+  .contact h2{
+   text-align: left;
+   margin-left: 15%;
+  }
+  
+  section {
+    margin-left: 9%;
   }
 }
 
 @media (max-width: 991px) {
-  .header {
-    padding: 2rem 4%;
+  html {
+    font-size: 42%;
   }
 
-  section {
-    padding: 10rem 4% 2rem;
+  .contact {
+    margin-left: 0px;
   }
 
-  .home {
-    padding: 0 4%;
-  }
-
-  .footer {
-    padding: 2rem 4%;
+  section{
+    margin-left: 18%;
   }
 }
 
 @media (max-width: 850px) {
-  .animate.home-img {
-    width: 55%;
+  html {
+    font-size: 25%;
   }
 }
 
