@@ -65,6 +65,10 @@ header {
   background: #f3f7f9;
 }
 
+#data-box p{
+  font-size: 20px;
+}
+
 .contact {
   width: 570px;
   position: fixed;
