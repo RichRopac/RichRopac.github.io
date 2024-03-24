@@ -1,5 +1,8 @@
 :root {
   --overlay-color: #193940;
+  --form-background-color: #ffffff; /* Solid color for form background */
+  --form-width: 40%; /* Initial width as a percentage */
+  --form-max-width: 450px; /* Maximum width in pixels */
 }
 
 * {
@@ -15,12 +18,16 @@
 }
 
 body {
-  position: relative;
+  margin: 0;
+  padding: 0;
   background-color: #193940;
-  background-image: url("../images/contact.jpeg");
+  background-image: url("../images/contact.jpeg"); /* Adjust path as necessary */
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-position: center center;
+  background-size: cover; /* Ensures the background covers the whole area */
+  height: 100vh; /* Full height of the viewport */
+  width: 100vw; /* Full width of the viewport */
 }
 
 .overlay {
@@ -31,11 +38,11 @@ body {
   height: 100%;
   background: var(--overlay-color);
   mix-blend-mode: overlay;
-  opacity: 1;
+  opacity: 0.6; /* Slightly transparent to ensure form readability */
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 2rem; /* Adjusted for responsiveness */
 }
 
 header {
@@ -43,7 +50,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 40px 100px;
+  padding: 2rem; /* Adjusted padding for consistency */
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -51,206 +58,108 @@ header {
 }
 
 .toggle {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: url("../images/close.png");
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
+  width: 30px; /* Adjusted size */
+  height: 30px;
+  background: url("../images/close.png") no-repeat center;
+  background-size: contain;
   cursor: pointer;
 }
 
-#data-box{
-  background: #f3f7f9;
+#data-box {
+  background: rgba(243, 247, 249, 0.8); /* Semi-transparent for readability */
 }
 
-#data-box p{
-  font-size: 20px;
-}
-
+/* Baseline styles for the .contact form */
 .contact {
-  width: 570px;
-  position: fixed;
-  top: 42%;
-  left: 53%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 15;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, -55%);
+  width: 700px; /* Fixed width for screens larger than 1200px */
+  padding: 40px; /* Adequate padding for readability and form interaction */
+  max-width: var(--form-max-width); /* Ensure it respects the max-width if specified */
+  background: var(--form-background-color);
+  border-radius: 8px;
+  box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
-.contact h2, p {
-  font-size: 30px;
-  text-align: center;
-  color: #193940;
-  padding-bottom: 4%;
-  text-shadow: -1px 1px 2px #000,
-				  1px 1px 2px #000,
-				  1px -1px 0 #000,
-				  -1px -1px 0 #000;
+.contact h2, .contact p {
+  font-size: 1.5rem; /* Adjusted font size */
+  color: black;
+  text-shadow: none; /* Removed text shadow for clarity */
 }
 
 .contact form {
-  max-width: 30rem;
-  margin-left: 8%;
-  text-align: center;
-}
-
-.contact form .input-box {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.contact form .input-box .input-field {
-  position: relative;
-  width: 49%;
-  margin: 0.8rem 0;
+  width: 100%; /* Use full width of .contact */
 }
 
 .contact form .input-box .input-field input,
 .contact form .textarea-field textarea {
-  width: 100%;
-  height: 100%;
-  padding: 1.1rem;
-  font-size: .9rem;
-  font-weight: 900;
-  color: black;
-  background: transparent;
-  border-radius: 0.6rem;
-  border: 0.2rem solid #193940;
+  background: #edf1f5; /* Background color for readability */
+  color: #333; /* Text color for contrast */
+  border: 2px solid #193940; /* Adjusted border for clarity */
 }
 
-.contact form .input-box .input-field input::placeholder,
-.contact form .textarea-field textarea::placeholder {
-  color: #193940;
-}
-
-.contact form .focus {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: beige;
-  font-weight: bold;
-  border-radius: 0.6rem;
-  z-index: -1;
-  transition: 0.5s;
-}
-
-.contact form .input-box .input-field input:focus ~ .focus,
-.contact form .input-box .input-field input:valid ~ .focus,
-.contact form .textarea-field textarea:focus ~ .focus,
-.contact form .textarea-field textarea:valid ~ .focus {
-  width: 100%;
-}
-
-.contact form .textarea-field {
-  position: relative;
-  margin: 0.8rem 0 2.7rem;
-  display: flex;
-}
-
-.contact form .textarea-field textarea {
-  resize: none;
+.contact form .input-box, .contact form .textarea-field, .submit_btn {
+  margin-top: 1rem; /* Added margin-top for spacing */
 }
 
 .submit_btn .btn {
-  position: relative;;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 8rem;
-  background: #193940;
-  border: 0.2rem solid black;
-  border-radius: 0.8rem;
-  font-size: 0.7rem;
-  font-weight: 900;
-  letter-spacing: 0.1rem;
-  color: beige;
-  z-index: 1;
-  overflow: hidden;
-  transition: 0.5s;
+  font-size: 1rem; /* Adjusted font size */
+  padding: 0.75rem 1.5rem; /* Padding for button size */
+  letter-spacing: normal; /* Adjusted letter spacing */
+  background: var(--overlay-color); /* Use variable for consistency */
+  color: beige; /* Text color */
 }
 
-.submit_btn {
-  padding-top: 5%;
-}
-
-.submit_btn .btn:hover {
-  font-weight: 900;
-  color: #193940;
-  background-color: beige;
-  cursor: pointer;
-}
-
-#b1,
-#b2,
-#b3 {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  font-size: 1.2rem;
-  color: beige;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-@media (max-width: 1500px) {
-  html {
-    font-size: 80%;
-  }
-
-  .contact h2{
-   text-align: left;
-   margin-left: 17%;
-  }
-  
-  section {
-    margin-left: 7%;
-  }
-} 
-
-@media (max-width: 1200px) {
-  html {
-    font-size: 50%;
-  }
-
-  .contact h2{
-   text-align: left;
-   margin-left: 15%;
-  }
-  
-  section {
-    margin-left: 9%;
-  }
-}
-
-@media (max-width: 991px) {
-  html {
-    font-size: 42%;
-  }
-
+/* Media Queries for responsiveness on smaller screens */
+@media (m-width: 1200px) {
   .contact {
-    margin-left: 0px;
-  }
-
-  section{
-    margin-left: 18%;
-  }
-}
-
-@media (max-width: 850px) {
-  html {
-    font-size: 25%;
+    width: 60%; /* Adjust the width to be 60% of the viewport width */
+    padding: 20px; /* Adjust padding to fit smaller screens */
   }
 }
 
 @media (max-width: 768px) {
-  .header {
-    background: var(--bg-color);
+  .contact {
+    width: 80%; /* Increase width percentage for smaller devices */
+    padding: 15px; /* Adjust padding as needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    width: 95%; /* Make the form take up almost the entire screen width */
+    padding: 10px; /* Minimize padding to maximize space */
+  }
+}
+
+
+@media (max-width: 375px) {
+  .contact {
+    width: 95vw; /* Make the form almost full-width on the smallest screens */
+    padding: 3vh 3vw; /* Increase padding slightly */
+  }
+  body, header {
+    padding: 1vw; /* Adjust padding for consistency */
+  }
+
+  .contact h2, .contact p, .contact form label {
+    font-size: 1rem; /* Further reduce the font size for very small devices */
+  }
+
+  .contact form .input-box .input-field input, 
+  .contact form .textarea-field textarea {
+    font-size: 0.7rem; /* Smaller font size for inputs and textarea */
+    padding: 0.8rem; /* Adjust padding to fit the smaller screen */
+  }
+
+  .submit_btn .btn {
+    padding: 0.6rem 1rem; /* Adjust button padding for better tapping */
+  }
+
+  header .logo, header .toggle {
+    font-size: 0.8rem; /* Adjust logo and toggle size for header */
   }
 }
